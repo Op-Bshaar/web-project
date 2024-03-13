@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+}
+.navbar{
+    background-color: #2eca6f;
+   
+
+}
+.navbar ul,.navbar2 ul{
+  margin: 0px;
+  text-align: center;
+  padding: 0px;
+  color: rgb(231, 230, 230);
+ 
+}
+li ,.navbar2 li{
+    display: inline-block;
+    padding: 8px;
+
+}
+
+.books{
+    padding-right: 15%;
+}
+.books-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+input[type = "text"]{
+    margin-right: 305px;
+    padding-right: 278px;
+    width: auto;
+    margin-top: 15px;
+    height: 27px;
+}
+#myImage{
+    margin: 0 auto;
+    width:100% ;
+    max-width: 100%;
+    
+}
+#cart-button{
+    margin-left: 64px;
+    background-color: #2eca6f;
+    width: 82px;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    color: rgb(238, 238, 238);
+}
+.navbar2 ul {
+    list-style-type: none;
+}
+
+.navbar2 li {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar2 li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: rgb(104, 110, 110);
+}
+
+.navbar2 .dropdown .dropdown-list {
+    display: none;
+    position: absolute;
+    min-width: 150px; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+}
+
+.navbar2 .dropdown:hover .dropdown-list {
+    display: block;
+   
+}
+
+.navbar2 .dropdown .dropdown-list li {
+    display: block; 
+}
+
+.navbar2{
+    margin-top: 100px;
+    background-color: #2eca6f;
+}
+
+.Loginfrom{
+    padding-right: 30px;
+    
+}
+.Loginfrom a,.Registerfrom a{
+    text-decoration: none;
+    color: rgb(133, 129, 129);
+}
+.image-style{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap :50px 40px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.images-style-container{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(237, 245, 241);
+    
+}
+.images-style-container p{
+    text-align: center;
+    color: gray;
+}
+.images-style-container span{
+    text-decoration: line-through;
+    color: gray;
+}
+.images-style-container strong{
+    display: inline;
+}
+.footer{
+    background-color: #6be9a0;
+}
+footer-list-1{
+    display: flex;
+    justify-content: space-between;
+}
+#margin-input{
+    margin-top: 100px;
+}
+
