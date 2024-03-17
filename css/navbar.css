@@ -3,26 +3,26 @@
     margin: 0;
     padding: 0;
     background-color: green;
-    padding: 14px 16px;
+    overflow: hidden;
 }
-li.navbar {
-    display: inline;
+a.navbar, li.navbar, li.navbar-active {
+    display: block;
     text-align: center;
+    text-decoration: none;
+    color: black;
+}
+a.navbar {
     padding: 14px 16px;
 }
-    li.navbar:hover {
+li.navbar, li.navbar-active {
+    float:left;
+}
+    li.navbar a.navbar:hover {
         background-color: wheat;
     }
-a.navbar {
-    color: black;
-    text-decoration: none;
-    text-align: left;
-    padding: 16px 18px;
-    text-align: center;
-}
 li.navbar-active {
-    display: inline;
     background-color: white;
-    text-align: center;
-    padding: 14px 16px;
+}
+li.navbar-active:hover {
+    background-color: grey;
 }

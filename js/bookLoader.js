@@ -4,7 +4,7 @@ function refresh() {
     var container = document.getElementById("books");
     var ul = document.createElement("ul");
     container.appendChild(ul);
-    for (var i = 1; i < 10; i++) {
+    for (var i = 1; i <= 10; i++) {
         var li = document.createElement("li");
         li.tabIndex = i;
         var div = document.createElement("div");
