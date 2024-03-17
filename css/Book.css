@@ -1,0 +1,12 @@
+.book {
+    display: inline-block;
+    padding: 20px 60px;
+    margin: 20px 20px;
+    border-style: solid;
+    border-radius: 50px;
+    user-select: none;
+}
+    .book:hover {
+        background-color: wheat;
+        cursor: pointer;
+    }
