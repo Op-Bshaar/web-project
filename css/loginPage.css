@@ -87,8 +87,8 @@ body {
 }
 
 
-.container .form .inputBox input:valid ~ span,
-.container .form .inputBox input:focus ~ span {
+.container .form .inputBox input :valid ~ span,
+.container .form .inputBox input :focus ~ span{
   color: #1edb6d;
   border: 1px solid #1edb6d;
   background: #223243;
@@ -97,6 +97,7 @@ body {
   border-radius: 10px;
   letter-spacing: 0.1em;
 }
+
 
 
 
@@ -136,4 +137,30 @@ body {
 p a{
   text-decoration:  none;
   font-size: 1rem;
+}
+
+
+#loginbutton{
+  min-width: 130px;
+  height: 40px;
+color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid #57cc99;
+  background: #57cc99;
+}
+#loginbutton:hover {
+  background-color: #223243;
+  color: #57cc99;
+
+}
+#loginbutton a{
+  text-decoration: none;
+  color: #fff;
 }
