@@ -9,6 +9,10 @@
    
 
 }
+#stylingnavbar{
+    text-decoration: none;
+    color: white;
+}
 .navbar ul,.navbar2 ul{
   margin: 0px;
   text-align: center;
