@@ -2,11 +2,15 @@
 function refresh() {
     document.getElementById("searchBar").value = "";
     var container = document.getElementById("books");
-    container.innerHTML = null;
+    var ul = document.createElement("ul");
+    container.appendChild(ul);
     for (var i = 1; i < 10; i++) {
+        var li = document.createElement("li");
+        li.tabIndex = i;
         var div = document.createElement("div");
-        div.innerHTML = `ID: ${i}<br />Name: book${i}<br />Author: author${i}<br />Description:<br />This book is called book${i} and is written by author${i}.<br /><br />`;
-        container.appendChild(div);
+        div.innerHTML = `Name: <a href="google.com">book${i}</a><br />Author: author${i}<br /><br />`;
+        li.appendChild(div);
+        ul.appendChild(li);
     }
 }
 function search() {
