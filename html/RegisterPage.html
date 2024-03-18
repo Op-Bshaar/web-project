@@ -46,21 +46,20 @@
 
 				<span>confirm password</span>
 			</div>
-				<div class="inputBox">
-                   
-					<input type="text" required="required" id="userTypeInput" list="userTypes" placeholder="Select user type">
-
-					<datalist id="userTypes">
-						<option value="admin"></option>
-						<option value="user"></option>
-					</datalist>
-					
-    
-                </div>
+			<div class="inputBox">
+				<label for="userTypeInput" class = "selectuser">Select user type:</label>
+				<select id="userTypeInpute" required>
+					<option value =" admin">  Admin</option>
+					<option value ="  user">User</option>
+				</select>
+			</div>
 			
-			<p>Already a member ? <a href="loginPage.html" class="create">Log in</a></p>
+				<button id="loginbutton" onclick="window.location.href='landingPage.html'">Confirm</button>
 
-		</div>
+			
+			    <p>Already a member ? <a href="loginPage.html" class="create">Log in</a></p>
+
+		  </div>
 		
 		<div class="form signin">
 
@@ -80,19 +79,24 @@
 				<input type="password" required="required">
 
 				<i class="fa-solid fa-lock"></i>
+				
 
 				<span>password</span>
-			</div>
-			<div class="inputBox">
-
-				<input type="submit" value="Login">
 				
 			</div>
-			<p>Not Registered ? <a href="#" class="create">Create an account</a></p>
+		
+			<div class="inputBox">
+				
+
+				<input type="submit" value="Confirm">
+				
+			</div>
+		
+			
 		</div>
-
+		
 	</div>
-
+  
 	
 </body>
 </html>
