@@ -149,13 +149,29 @@ body {
   cursor: pointer;
   min-width: 100%;
   height: 30%;
+  margin-top: 20px;
 }
 #loginbutton:hover {
   background-color: #223243;
-  color: #2eca6f;
+  color: #fff;
 
 }
 #loginbutton a{
   text-decoration: none;
   color: #fff;
 }
+.selectuser{
+  color: #fff;
+  padding-right: 10px;
+
+}
+#userTypeInpute{
+  width: 50%;
+  background-color: #223243;
+  border: 1px solid #57cc99;
+  border-radius: 100px;
+  color: #fff;
+  height: 166%;
+  padding-left: 10px;
+}
+

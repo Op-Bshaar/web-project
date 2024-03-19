@@ -1,0 +1,32 @@
+.exit {
+    background-color: darkgoldenrod;
+}
+
+.role {
+    font-weight:bold;
+}
+.rolefunction {
+    font-weight: bold;
+    border-width:5px;
+    border-color:darkgoldenrod;
+    color:darkgoldenrod;
+}
+.description
+{
+    resize:horizontal;
+    background-color:beige;
+    border-width:2px;
+    border-color:darkgoldenrod;
+}
+.info {
+    resize: None;
+    background-color: beige;
+    border-width: 2px;
+    border-color: darkgoldenrod;
+}
+.confirmation
+{
+    border-width:5px;
+    border-color:darkgoldenrod;
+    color:darkgoldenrod;
+}
