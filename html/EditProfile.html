@@ -6,9 +6,18 @@
     <title></title>
 
     <link rel="stylesheet" href="../css/Profile.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
-    <div><a class="exit" href="LandingPage.html">Return to landing page</a></div>
+    <ul class="navbar">
+        <li class="navbar"><a class="navbar" href="landingPage.html">Home</a></li>
+        <li class="navbar"><a class="navbar" href="AddBookPage.html">New Book</a></li>
+        <li class="navbar"><a class="navbar" href="About.html">About</a></li>
+        <li class="navbar"><a class="navbar" href="ContactUs.html">Contact Us</a></li>
+        <li class="navbar-active"><a class="navbar" href="UserProfile.html">Profile</a></li>
+        <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
+        <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
+    </ul><br />
     <img src="../css/images/NoProfile.png" alt="user profile pic">
     <p>New Profile Picture</p>
     <input type="file" class="directory" webkitdirectory />
@@ -17,7 +26,7 @@
     <p class="username">New Password</p>
     <textarea class="info" rows="1" cols="20"></textarea>
     <div class="descriptionArea"><textarea class="description" rows="4" cols="50"></textarea></div>
-    <button class="confirmation">Confirm</button>
+    <button class="confirmation" onclick="window.location.href='UserProfile.html'">Confirm</button>
 
 </body>
 </html>
