@@ -6,6 +6,7 @@
     <title></title>
 
     <link rel="stylesheet" href="../css/Profile.css">
+    <script src="../js/ProfileScript.js"></script>
 </head>
 <body>
     <div><a class="exit" href="LandingPage.html">Return to landing page</a></div>
@@ -14,8 +15,9 @@
     <div class="descriptionArea"><textarea class="description" rows="4" cols="50"></textarea></div>
     <ul class="UserPrivilege">
         <li class="rolefunctionArea"><button class="rolefunction" href="AddBookPage.html">Add book</button></li>
-        <li class="rolefunctionArea"><button class="rolefunction">Owned books</button></li>
+        <li class="rolefunctionArea"><button onclick="ChangeDisplay()" class="rolefunction">Owned books</button></li>
         <li class="rolefunctionArea"><button class="rolefunction"><a href="EditProfile.html">Edit profile</a></button></li>
+        <span class="BookList" id="WhereBook"><p></p></span>
     </ul>
 
 </body>
