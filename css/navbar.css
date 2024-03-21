@@ -3,26 +3,22 @@
     margin: 0;
     padding: 0;
     background-color: green;
-    overflow: hidden;
 }
-a.navbar, li.navbar, li.navbar-active {
-    display: block;
+a.navbar, li.navbar, li.navbar-active ,a.navbar li.navbar-active {
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     color: black;
 }
-a.navbar {
-    padding: 14px 16px;
-}
-li.navbar, li.navbar-active {
-    float:left;
-}
-    li.navbar a.navbar:hover {
+    a.navbar, a.navbar li.navbar-active {
+        padding: 14px 16px;
+    }
+    a.navbar:hover {
         background-color: wheat;
     }
-li.navbar-active {
+li.navbar-active, a.navbar-active {
     background-color: white;
 }
-li.navbar-active:hover {
-    background-color: grey;
-}
+    a.navbar-active:hover{
+        background-color: grey;
+    }
