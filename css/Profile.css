@@ -1,32 +1,69 @@
-.exit {
-    background-color: darkgoldenrod;
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
-
-.role {
-    font-weight:bold;
+img{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    height: 150px;
 }
-.rolefunction {
+p.username{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+span.role{
     font-weight: bold;
-    border-width:5px;
-    border-color:darkgoldenrod;
-    color:darkgoldenrod;
+    color: #666a70
 }
-.description
-{
-    resize:horizontal;
-    background-color:beige;
-    border-width:2px;
-    border-color:darkgoldenrod;
+.descriptionArea{
+    text-align: center;
+    margin-bottom: 20px
 }
-.info {
-    resize: None;
-    background-color: beige;
-    border-width: 2px;
-    border-color: darkgoldenrod;
+textarea.description{
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 80%;
 }
-.confirmation
-{
-    border-width:5px;
-    border-color:darkgoldenrod;
-    color:darkgoldenrod;
+ul.UserPrivilege{
+ text-align: center;
+ padding: 0;
+ list-style-type: none;
+}
+li.rolefunctionArea{
+    margin: 0 10px;
+    display: inline-block;
+
+}
+button.rolefunction{
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #86898c;
+    margin-top: 10px;
+
+}
+button.rolefunction:hover{
+    background-color: #36516d;
+    transition: 0.3s;
+
+}
+span.Booklist p{
+    font-weight: bold;
 }

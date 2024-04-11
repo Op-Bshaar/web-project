@@ -1,24 +1,92 @@
-﻿ul.navbar {
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; 
+  }
+  
+body.dark{
+  background-color: #c7c9cb;
+}
+
+body.light{
+    background-color: #fff;
+}
+
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: green;
+    background-color: #394f65;
+     
 }
 a.navbar, li.navbar, li.navbar-active ,a.navbar li.navbar-active {
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
-    a.navbar, a.navbar li.navbar-active {
-        padding: 14px 16px;
-    }
-    a.navbar:hover {
-        background-color: wheat;
+a.navbar, a.navbar li.navbar-active {
+        padding: 30px 16px;
+}
+a.navbar:hover {
+        color: #dfe2e4;
     }
 li.navbar-active, a.navbar-active {
-    background-color: white;
+    background-color: #1e3439;
 }
-    a.navbar-active:hover{
+ a.navbar-active:hover{
         background-color: grey;
-    }
+}
+
+#searchBar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6d7986;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(158, 161, 163);
+}
+
+#books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+ }
+      
+.book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+      
+.book img {
+    width: 100%;
+    border-radius: 4px;
+}
+      
+.book h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+      
+.book p {
+    margin: 0;
+    font-size: 14px;
+}
+      
