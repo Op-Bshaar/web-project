@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>New Book</title>
     <link rel="stylesheet" href="../css/navbar.css"/>
+    <link rel="stylesheet" href="../css/AddBookPage.css"/>
 </head>
 <body>
     <ul class="navbar">
@@ -15,7 +16,9 @@
         <li class="navbar"><a class="navbar" href="UserProfile.html">Profile</a></li>
         <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
         <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
+        <li class="navbar"><button id = "dark-light">click me</button></li>
     </ul><br />
+    <div id ="contactId"></div>
     <form>
         <div>
             Book Id: <input type="text" placeholder="0000000000000" name="Id" /><br />
@@ -26,5 +29,9 @@
         </div>
         <input type="submit" />
     </form>
+    <script>
+          loadNavbar('AddBookPage.html','contactId');
+    </script>
+   
 </body>
 </html>

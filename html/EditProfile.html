@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <title></title>
 
-    <link rel="stylesheet" href="../css/Profile.css">
+    <!-- <link rel="stylesheet" href="../css/Profile.css"> -->
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/EditProfile.css">
 </head>
 <body>
     <ul class="navbar">
@@ -17,9 +18,11 @@
         <li class="navbar-active"><a class="navbar" href="UserProfile.html">Profile</a></li>
         <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
         <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
+        <li class="navbar"><button id = "dark-light">click me</button></li>
     </ul><br />
+    <div id ="contactId"></div>
     <img src="../css/images/NoProfile.png" alt="user profile pic">
-    <p>New Profile Picture</p>
+    <p class="edit">New Profile Picture</p>
     <input type="file" class="directory" />
     <p class="username">New User Name</p>
     <textarea class="info" rows="1" cols="20"></textarea>
@@ -27,6 +30,10 @@
     <textarea class="info" rows="1" cols="20"></textarea>
     <div class="descriptionArea"><textarea class="description" rows="4" cols="50"></textarea></div>
     <button class="confirmation" onclick="window.location.href='UserProfile.html'">Confirm</button>
+        <script>
+             loadNavbar('EditProfile.html','contactId');
+        </script>
+   
 
 </body>
 </html>
