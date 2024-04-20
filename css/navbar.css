@@ -12,13 +12,28 @@ body.dark{
 body.light{
     background-color: #fff;
 }
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #394f65;
+}
 
+.navbar-logo {
+    height: 150.5px;
+    width: 222.6    ;
+    margin-right: 20px;
+}
 ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #394f65;
      
+}
+img {
+    height: 251px; 
+    width: 318px;
 }
 a.navbar, li.navbar, li.navbar-active ,a.navbar li.navbar-active {
     display: inline-block;
