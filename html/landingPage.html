@@ -6,19 +6,20 @@
     <title>Libarary Website</title>
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/Book.css" />
+    <link rel="stylesheet" href="../css/background.css" />
     <script src="../js/bookLoader.js"></script>
 </head>
 <body>
     <ul class="navbar">
         <li class="navbar-active"><a class="navbar" href="landingPage.html">Home</a></li>
-        <li class="navbar"><a class="navbar" href="AddBookPage.html">New Book</a></li>
+        <li class="navbar" name ="Admin"><a class="navbar" href="AddBookPage.html">New Book</a></li>
         <li class="navbar"><a class="navbar" href="About.html">About</a></li>
         <li class="navbar"><a class="navbar" href="ContactUs.html">Contact Us</a></li>
-        <li class="navbar"><a class="navbar" href="UserProfile.html">Profile</a></li>
-        <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
-        <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
-        <li class="navbar"><button id = "dark-light">click me</button></li>
-        <li class="navbar" style="padding-left: 300px;color: #90d8f9;"><p>EGYPT'S FIRST BOOKSTORE FOR GEEKS</p></li>
+        <li class="navbar" name ="any"><a class="navbar" href="UserProfile.html">Profile</a></li>
+        <li name ="unsigned" class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
+        <li name ="unsigned"  class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
+        <li name ="any"  class="navbar"><button onclick="signout()">sign out</button></li>
+        <li class="navbar" style="padding-left: 300px;color: #90d8f9;">EGYPT'S FIRST BOOKSTORE FOR GEEKS</li>
         
     </ul><br />
 
@@ -34,32 +35,8 @@
 
     <script>
          refresh();
-       document.addEventListener("DOMContentLoaded",function(){
-           let toggletbutton = document.getElementById("dark-light");
-              toggletbutton.addEventListener("click",function(){
-                 document.body.classList.toggle("dark");
-        });
-       });
-
-       function loadNavbar(urlPage,idPage){
-        fetch(urlPage)
-        .then(response=>{
-         if (!response.ok){
-            throw new Error("faild to load");
-         }
-         return respose.text();
-        })
-        .then(data=>{
-            document.getElementById(idPage).innerHTML = data;
-        })
-        .catch(error=>{
-             console.log("Error");
-        })
-       
-       }
-      
-       
     </script>
+    <script src="../js/content.js"></script>
     
 </body>
 </html>

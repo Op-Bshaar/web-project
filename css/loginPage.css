@@ -97,7 +97,9 @@ body {
 .container .form .inputBox input:focus {
   border: 1px solid  #2eca6f;
 }
-
+    .container .form .inputBox input:user-invalid{
+        border: 1px solid #ff0000;
+    }
 .container .form .inputBox i {
   position: absolute;
   top: 15px;
@@ -165,13 +167,13 @@ body {
   padding-right: 10px;
 
 }
-#userTypeInpute{
-  width: 50%;
-  background-color: #223243;
-  border: 1px solid #57cc99;
-  border-radius: 100px;
-  color: #fff;
-  height: 166%;
-  padding-left: 10px;
+#userTypeInput{
+    width: 50%;
+    background-color: #223243;
+    border: 1px solid #57cc99;
+    border-radius: 100px;
+    color: #fff;
+    height: 166%;
+    padding-left: 10px;
 }
 

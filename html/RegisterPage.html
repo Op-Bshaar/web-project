@@ -7,96 +7,59 @@
 	<link rel="stylesheet" href="../css/loginPage.css">
 </head>
 <body>
-	<div class="container">
+	<form action="landingPage.html" onsubmit="login()">
+		<div class="container">
 
-		<div class="form signup">
+			<div class="form signup">
 
-			<h2>Sign Up</h2>
+				<h2>Sign Up</h2>
 
-			<div class="inputBox">
+				<div class="inputBox">
 
-				<input type="text" required="required">
+					<input id="username" type="text" minlength="4" maxlength="12" required="required">
 
-				<i class="fa-regular fa-user"></i>
+					<i class="fa-regular fa-user"></i>
 
-				<span>username</span>
+					<span>username</span>
 
-			</div>
-			<div class="inputBox">
+				</div>
+				<div class="inputBox">
 
-				<input type="text" required="required">
+					<input name="mail" type="email" required="required">
 
-				<i class="fa-regular fa-envelope"></i>
-				<span>email address</span>
+					<i class="fa-regular fa-envelope"></i>
+					<span>email address</span>
 
-			</div>
-			<div class="inputBox">
+				</div>
+				<div class="inputBox">
 
-				<input type="password" required="required">
+					<input type="password" id="password" minlength="6" maxlength="32" required="required">
 
-				<i class="fa-solid fa-lock"></i>
+					<i class="fa-solid fa-lock"></i>
 
-				<span>create password</span>
-			</div>
-			<div class="inputBox">
+					<span>create password</span>
+				</div>
+				<div class="inputBox">
 
-				<input type="password" required="required">
+					<input id="confirmPassword" type="password" required="required">
 
-				<i class="fa-solid fa-lock"></i>
+					<i class="fa-solid fa-lock"></i>
 
-				<span>confirm password</span>
-			</div>
-			<div class="inputBox">
-				<label for="userTypeInput" class = "selectuser">Select user type:</label>
-				<select id="userTypeInpute" required>
-					<option value =" admin">  Admin</option>
-					<option value ="  user">User</option>
-				</select>
-			</div>
-			
-				<button id="loginbutton" onclick="window.location.href='landingPage.html'">Confirm</button>
-
-			
-			    <p>Already a member ? <a href="loginPage.html" class="create">Log in</a></p>
-
-		  </div>
-		
-		<div class="form signin">
-
-			<h2>Sign In</h2>
-
-			<div class="inputBox">
-
-				<input type="text" required="required">
-
-				<i class="fa-regular fa-user"></i>
-
-				<span>username</span>
+					<span>confirm password</span>
+				</div>
+				<div class="inputBox">
+					<label for="userTypeInput" class="selectuser">Select user type:</label>
+					<select id="userTypeInput" required>
+						<option value="User">User</option>
+						<option value="Admin">Admin</option>
+					</select>
+				</div>
+				<button type="submit" id="loginbutton">Confirm</button>
+				<p>Already a member ? <a href="loginPage.html" class="create">Log in</a></p>
 			</div>
 
-			<div class="inputBox">
-
-				<input type="password" required="required">
-
-				<i class="fa-solid fa-lock"></i>
-				
-
-				<span>password</span>
-				
-			</div>
-		
-			<div class="inputBox">
-				
-
-				<input type="submit" value="Confirm">
-				
-			</div>
-		
-			
 		</div>
-		
-	</div>
-  
-	
+	</form>
+	<script src="../js/login.js"></script>
 </body>
 </html>

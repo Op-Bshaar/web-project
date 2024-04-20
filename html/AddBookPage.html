@@ -4,34 +4,32 @@
 <head>
     <meta charset="utf-8" />
     <title>New Book</title>
-    <link rel="stylesheet" href="../css/navbar.css"/>
-    <link rel="stylesheet" href="../css/AddBookPage.css"/>
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/AddBookPage.css" />
+    <link rel="stylesheet" href="../css/background.css" />
+    <script src="../js/bookLoader.js"></script>
 </head>
 <body>
     <ul class="navbar">
         <li class="navbar"><a class="navbar" href="landingPage.html">Home</a></li>
-        <li class="navbar-active"><a class="navbar" href="AddBookPage.html">New Book</a></li>
+        <li class="navbar-active" name="Admin"><a class="navbar" href="AddBookPage.html">New Book</a></li>
         <li class="navbar"><a class="navbar" href="About.html">About</a></li>
         <li class="navbar"><a class="navbar" href="ContactUs.html">Contact Us</a></li>
-        <li class="navbar"><a class="navbar" href="UserProfile.html">Profile</a></li>
-        <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
-        <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
-        <li class="navbar"><button id = "dark-light">click me</button></li>
+        <li class="navbar" name="any"><a class="navbar" href="UserProfile.html">Profile</a></li>
+
     </ul><br />
-    <div id ="contactId"></div>
+    <div id="contactId"></div>
     <form>
         <div>
-            Book Id: <input type="text" placeholder="0000000000000" name="Id" /><br />
-            Book Name: <input type="text" placeholder="book name" name="Name" /><br />
-            Author: <input type="text" placeholder="author" name="Author" /><br />
+            Book Id: <input type="text" placeholder="0000000000000" name="Id" required /><br />
+            Book Name: <input type="text" placeholder="book name" name="Name" required /><br />
+            Author: <input type="text" placeholder="author" name="Author" required /><br />
             Category: <input type="text" placeholder="category" name="Category" /><br />
             Description:<br><textarea name="Description" maxlength="255" cols="50" rows="10"></textarea><br />
         </div>
-        <input type="submit" />
+        <button onclick="addBook()">Submit</button>
     </form>
-    <script>
-          loadNavbar('AddBookPage.html','contactId');
-    </script>
-   
+    <script src="../js/content.js"></script>
+
 </body>
 </html>
