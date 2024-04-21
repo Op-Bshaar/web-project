@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Detail</title>
+    <link rel="stylesheet" href="../css/BookDetails.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/background.css" />
     <script src="../js/bookLoader.js"></script>
 </head>
 <body>
+    <body style="background-color: #dad8d8 ">
     <ul class="navbar">
         <li class="navbar"><a class="navbar" href="landingPage.html">Home</a></li>
-        <li class="navbar" name="Admin"><a class="navbar" href="AddBookPage.html">New Book</a></li>
+        <li class="navbar"><a class="navbar" href="AddBookPage.html">New Book</a></li>
         <li class="navbar"><a class="navbar" href="About.html">About</a></li>
         <li class="navbar"><a class="navbar" href="ContactUs.html">Contact Us</a></li>
-        <li class="navbar" name="any"><a class="navbar" href="UserProfile.html">Profile</a></li>
-        <li name="unsigned" class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
-        <li name="unsigned" class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
-        <li name="any" class="navbar"><button onclick="signout()">sign out</button></li>
-
+        <li class="navbar"><a class="navbar" href="UserProfile.html">Profile</a></li>
+        <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
+        <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
     </ul><br />
-    <div id="contactId"></div>
+    <div id="BookBlock">
+    <div id = "contactId"></div>
     <h1 id="title">Book Title</h1>
+    <h2 id="by"> written by</h2>
     <h2 id="author">Author Name</h2>
-    <h2 id="catogery">Catogery</h2>
+    <br/>
+    <h2 id="what">category:</h2>
+    <h2 id="catogery">Category</h2>
     <p id="description">Description</p>
+    </div>
     <script>
         loadBook();
+        loadNavbar('ContactUs.html','contactId');
     </script>
-    <script src="../js/content.js"></script>
 </body>
 </html>
 
