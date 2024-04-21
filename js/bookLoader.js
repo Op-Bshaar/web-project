@@ -11,11 +11,28 @@ class book {
 function refresh() {
     document.getElementById("searchBar").value = "";
     var container = document.getElementById("books");
+    loadBooks(getBooks(), container);
+} function loadBorrowedBooks() {
+    var container = document.getElementById("books");
+    loadBooks(getBorrowedBooks(), container);
+}
+function loadBooks(books, container) {
     container.innerHTML = '';
-    for (book of getBooks()) {
+    for (book of books) {
         var span = document.createElement("span");
-        span.innerHTML = `<div onclick ="window.location.href='BookDetails.html?id=${book.id}'" class="book">Name: ${book.name}<br />Author: ${book.author}<br /></div >`
+        span.innerHTML = getBookHtml(book);
         container.appendChild(span);
+    }
+}
+function* getBorrowedBooks() {
+    x = JSON.parse(localStorage.getItem('borrowedBooks'));
+    books = JSON.parse(localStorage.getItem('books'));
+    if (x == null || x.length == 0) {
+        return [];
+    }
+    for (id of x) {
+        book = books.find((b) => b.id == id);
+        yield book;
     }
 }
 function* getBooks()
@@ -63,9 +80,16 @@ function remove() {
 }
 function borrow() {
     const id = getId();
-
+    borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks'));
+    if (borrowedBooks == null || borrowedBooks.length == 0) {
+        borrowedBooks = [];
+    }
+    borrowedBooks.push(id);
+    localStorage.setItem('borrowedBooks', JSON.stringify(borrowedBooks));
 }
-
+function getBookHtml(book) {
+    return `<div onclick ="window.location.href='BookDetails.html?id=${book.id}'" class="book">Name: ${book.name}<br />Author: ${book.author}<br /></div >`;
+}
 function loadBook() {
     const id = getId();
     books = JSON.parse(localStorage.getItem('books'));

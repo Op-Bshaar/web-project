@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/Profile.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/background.css" />
-    <script src="../js/ProfileScript.js"></script>
+    <link rel="stylesheet" href="../css/book.css" />
 </head>
 <body>
     <ul class="navbar">
@@ -20,14 +20,14 @@
 
     </ul><br />
     <div id="contactId"></div>
-    <img src="../css/images/NoProfile.png" alt="user profile pic">
-    <p class="username">temp user name (<span class="role">guest</span>)</p>
-    <div class="descriptionArea"><textarea class="description" rows="4" cols="50"></textarea></div>
+    <p id="username" class="username">temp user name (<span class="role">guest</span>)</p>
     <ul class="UserPrivilege">
-        <li class="rolefunctionArea"><button onclick="ChangeDisplay()" class="rolefunction">Owned books</button></li>
+        <li name="User" class="rolefunctionArea"><button onclick="loadBorrowedBooks()" class="rolefunction">Owned books</button></li>
         <li class="rolefunctionArea"><button class="rolefunction" onclick="window.location.href='EditProfile.html'">Edit profile</button></li>
-        <span class="BookList" id="WhereBook"></span>
+        <div class="BookList" id="books"></div>
     </ul>
+    <script src="../js/bookLoader.js"></script>
+    <script src="../js/ProfileScript.js"></script>
     <script src="../js/content.js"></script>
 </body>
 </html>
