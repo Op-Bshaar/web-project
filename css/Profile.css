@@ -46,24 +46,6 @@ li.rolefunctionArea{
     display: inline-block;
 
 }
-button.rolefunction{
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: #86898c;
-    margin-top: 10px;
-
-}
-button.rolefunction:hover{
-    background-color: #36516d;
-    transition: 0.3s;
-
-}
 span.Booklist p{
     font-weight: bold;
 }
