@@ -41,9 +41,26 @@ function addBook() {
     books.push(new book(id, n, author, category, description));
     localStorage.setItem('books', JSON.stringify(books));
 }
-function loadBook() {
+function getId() {
     const params = new URLSearchParams(document.location.search);
     const id = params.get("id");
+    return id;
+}
+function remove() {
+
+    const id = getId();
+    books = JSON.parse(localStorage.getItem('books'));
+    if (books == null || books.length == 0) return;
+    window.location.href = 'LandingPage.html';
+
+}
+function borrow() {
+    const id = getId();
+
+}
+
+function loadBook() {
+    const id = getId();
     books = JSON.parse(localStorage.getItem('books'));
     if (books == null ) {
         return;
@@ -54,9 +71,13 @@ function loadBook() {
             document.getElementById("author").innerHTML = b.author;
             document.getElementById("catogery").innerHTML = b.catogery;
             document.getElementById("description").innerHTML =b.description;
-            break;
+            return;
         }
     }
+    document.getElementById("title").innerHTML = "Book not found!";
+    document.getElementById("author").innerHTML = "";
+    document.getElementById("catogery").innerHTML = "";
+    document.getElementById("description").innerHTML = "";
 }
 function search() {
 
