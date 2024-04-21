@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Detail</title>
+    <link rel="stylesheet" href="../css/BookDetailsEditPage.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <script src="../js/bookLoader.js"></script>
+</head>
+<body>
+    <body style="background-color: #dad8d8 ">
+    <ul class="navbar">
+        <li class="navbar"><a class="navbar" href="landingPage.html">Home</a></li>
+        <li class="navbar"><a class="navbar" href="AddBookPage.html">New Book</a></li>
+        <li class="navbar"><a class="navbar" href="About.html">About</a></li>
+        <li class="navbar"><a class="navbar" href="ContactUs.html">Contact Us</a></li>
+        <li class="navbar"><a class="navbar" href="UserProfile.html">Profile</a></li>
+        <li class="navbar"><a class="navbar" href="loginPage.html">Login</a></li>
+        <li class="navbar"><a class="navbar" href="RegisterPage.html">Registor</a></li>
+    </ul><br />
+    <div id="BookBlock">
+    <div id = "contactId"></div>
+    <input type="text" id="title"></input>
+    <h2 id="by"> written by</h2>
+    <input type="text" id="author"></input>
+    <br/>
+    <h2 id="what">category:</h2>
+    <input type="text" id="catogery"></input>
+    <textarea id="description"></textarea>
+    <button id="edit">Edit book info</button>
+    </div>
+    <script>
+        loadBook();
+        loadNavbar('ContactUs.html','contactId');
+    </script>
+</body>
+</html>
+
