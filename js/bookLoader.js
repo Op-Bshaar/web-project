@@ -11,18 +11,28 @@ class book {
 function refresh() {
     document.getElementById("searchBar").value = "";
     var container = document.getElementById("books");
-    loadBooks(getBooks(), container);
-} function loadBorrowedBooks() {
-    var container = document.getElementById("books");
-    loadBooks(getBorrowedBooks(), container);
-}
-function loadBooks(books, container) {
     container.innerHTML = '';
-    for (book of books) {
+    for (book of getBooks()) {
         var span = document.createElement("span");
         span.innerHTML = getBookHtml(book);
         container.appendChild(span);
     }
+}
+function loadBorrowedBooks() {
+    var container = document.getElementById("books");
+    container.innerHTML = '';
+    for (book of getBorrowedBooks()) {
+        var span = document.createElement("span");
+        span.innerHTML = getBookHtml(book);
+        container.appendChild(span);
+    }
+}
+function returnBook() {
+    const id = getId();
+    x = JSON.parse(localStorage.getItem('borrowedBooks'));
+    i = x.indexOf(id);
+    x.splice(i, 1);
+    localStorage.setItem('borrowedBooks', JSON.stringify(x));
 }
 function* getBorrowedBooks() {
     x = JSON.parse(localStorage.getItem('borrowedBooks'));
@@ -109,6 +119,18 @@ function loadBook() {
     }
     document.getElementById('BookBlock').style.display = 'none';
     document.getElementById('error').style.display = '';
+}
+function toggleBorrowButon() {
+    const id = getId();
+    borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks'));
+    if (borrowedBooks == null || borrowedBooks.length == 0 || borrowedBooks.indexOf(id) < 0) {
+        document.getElementById('borrow').disabled = false;
+        document.getElementById('return').disabled = true;
+    }
+    else {
+        document.getElementById('borrow').disabled = true;
+        document.getElementById('return').disabled = false;
+    }
 }
 function search() {
 

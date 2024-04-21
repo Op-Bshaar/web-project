@@ -29,12 +29,14 @@
         <p id="description">Description</p>
         <br />
         <button name="Admin" onclick="remove()">Remove</button>
-        <button name="User" onclick="borrow()">Borrow</button>
+        <button name="User" id ="borrow"onclick="borrow(); toggleBorrowButon();">Borrow</button>
+        <button name="User" id="return" onclick="returnBook(); toggleBorrowButon()">Return</button>
     </div>
     <div id="error">Book not found!</div>
     <script src="../js/content.js"></script>
     <script>
         loadBook();
+        toggleBorrowButon();
     </script>
 </body>
 </html>
