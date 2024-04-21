@@ -51,6 +51,13 @@ function remove() {
     const id = getId();
     books = JSON.parse(localStorage.getItem('books'));
     if (books == null || books.length == 0) return;
+    for (i = 0; i < books.length; i++) {
+        const b = books[i];
+        if (b.id == id) {
+            books.splice(i,1);
+        }
+    }
+    localStorage.setItem('books', JSON.stringify(books));
     window.location.href = 'LandingPage.html';
 
 }
@@ -67,6 +74,8 @@ function loadBook() {
     }
     for (b of books) {
         if (b.id == id) {
+            document.getElementById('BookBlock').style.display = '';
+            document.getElementById('error').style.display = 'none';
             document.getElementById("title").innerHTML = b.name;
             document.getElementById("author").innerHTML = b.author;
             document.getElementById("catogery").innerHTML = b.catogery;
@@ -74,10 +83,8 @@ function loadBook() {
             return;
         }
     }
-    document.getElementById("title").innerHTML = "Book not found!";
-    document.getElementById("author").innerHTML = "";
-    document.getElementById("catogery").innerHTML = "";
-    document.getElementById("description").innerHTML = "";
+    document.getElementById('BookBlock').style.display = 'none';
+    document.getElementById('error').style.display = '';
 }
 function search() {
 
