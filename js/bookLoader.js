@@ -14,8 +14,35 @@ function refresh() {
     container.innerHTML = '';
     for (book of getBooks()) {
         var span = document.createElement("span");
-        span.innerHTML = `<div onclick ="window.location.href='BookDetails.html?id=${book.id}'" class="book">Name: ${book.name}<br />Author: ${book.author}<br /></div >`
+        span.innerHTML = getBookHtml(book);
         container.appendChild(span);
+    }
+}
+function loadBorrowedBooks() {
+    var container = document.getElementById("books");
+    container.innerHTML = '';
+    for (book of getBorrowedBooks()) {
+        var span = document.createElement("span");
+        span.innerHTML = getBookHtml(book);
+        container.appendChild(span);
+    }
+}
+function returnBook() {
+    const id = getId();
+    x = JSON.parse(localStorage.getItem('borrowedBooks'));
+    i = x.indexOf(id);
+    x.splice(i, 1);
+    localStorage.setItem('borrowedBooks', JSON.stringify(x));
+}
+function* getBorrowedBooks() {
+    x = JSON.parse(localStorage.getItem('borrowedBooks'));
+    books = JSON.parse(localStorage.getItem('books'));
+    if (x == null || x.length == 0) {
+        return [];
+    }
+    for (id of x) {
+        book = books.find((b) => b.id == id);
+        yield book;
     }
 }
 function* getBooks()
@@ -41,21 +68,68 @@ function addBook() {
     books.push(new book(id, n, author, category, description));
     localStorage.setItem('books', JSON.stringify(books));
 }
-function loadBook() {
+function getId() {
     const params = new URLSearchParams(document.location.search);
     const id = params.get("id");
+    return id;
+}
+function remove() {
+
+    const id = getId();
+    books = JSON.parse(localStorage.getItem('books'));
+    if (books == null || books.length == 0) return;
+    for (i = 0; i < books.length; i++) {
+        const b = books[i];
+        if (b.id == id) {
+            books.splice(i,1);
+        }
+    }
+    localStorage.setItem('books', JSON.stringify(books));
+    window.location.href = 'LandingPage.html';
+
+}
+function borrow() {
+    const id = getId();
+    borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks'));
+    if (borrowedBooks == null || borrowedBooks.length == 0) {
+        borrowedBooks = [];
+    }
+    borrowedBooks.push(id);
+    localStorage.setItem('borrowedBooks', JSON.stringify(borrowedBooks));
+}
+function getBookHtml(book) {
+    return `<div onclick ="window.location.href='BookDetails.html?id=${book.id}'" class="book">Name: ${book.name}<br />Author: ${book.author}<br /></div >`;
+}
+function loadBook() {
+    const id = getId();
     books = JSON.parse(localStorage.getItem('books'));
     if (books == null ) {
         return;
     }
     for (b of books) {
         if (b.id == id) {
+            document.getElementById('BookBlock').style.display = '';
+            document.getElementById('error').style.display = 'none';
             document.getElementById("title").innerHTML = b.name;
             document.getElementById("author").innerHTML = b.author;
             document.getElementById("catogery").innerHTML = b.catogery;
             document.getElementById("description").innerHTML =b.description;
-            break;
+            return;
         }
+    }
+    document.getElementById('BookBlock').style.display = 'none';
+    document.getElementById('error').style.display = '';
+}
+function toggleBorrowButon() {
+    const id = getId();
+    borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks'));
+    if (borrowedBooks == null || borrowedBooks.length == 0 || borrowedBooks.indexOf(id) < 0) {
+        document.getElementById('borrow').disabled = false;
+        document.getElementById('return').disabled = true;
+    }
+    else {
+        document.getElementById('borrow').disabled = true;
+        document.getElementById('return').disabled = false;
     }
 }
 function search() {

@@ -1,3 +1,1 @@
-function ChangeDisplay() {
-    document.getElementById("WhereBook").innerHTML = "no available books currently";
-}
+document.getElementById('username').innerHTML = sessionStorage.getItem('username');
